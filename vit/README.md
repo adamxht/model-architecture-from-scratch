@@ -15,3 +15,4 @@ Referencess:
 - Solution? Normalization so the inputs will always follow a distribution (Gaussian).
 - BatchNorm: calculate mean and variance along the batch dimension, across inputs. Problem is we require more inputs per batch.
 - LayerNorm: calculate mean and variance along each layer, which means it is input independent.
+- RMSNorm: calculagte mean, do not need to center around zero, just need to center around the mean, only need to compute one statistics so it is faster. The justification is that LayerNorm's success if caused by the rescaling invariance instead of recentering invariance.
